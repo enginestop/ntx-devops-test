@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  tools {
+    git 'Default'
+    nodejs 'nodejs'    // jika Anda juga pakai Jenkins NodeJS plugin
+  }
   stages {
     stage('Checkout') {
       steps {
