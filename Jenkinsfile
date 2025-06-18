@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git 'https://github.com/enginestop/ntx-devops-test.git'
+        checkout scm
       }
     }
     stage('Build & Deploy') {
