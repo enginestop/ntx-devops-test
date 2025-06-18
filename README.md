@@ -2,7 +2,7 @@
 
 ## Tools and Technologies
 
-- **CI Services**: Jenkins
+- **CI/CD Services**: Jenkins
 - **Local Environment**: Docker
 - **Load Balancers**: NGINX
 - **Version Control**: GitHub
