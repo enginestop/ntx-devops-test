@@ -1,92 +1,11 @@
 # DevOps Engineer - Technical Test
 
-Welcome to the DevOps Engineer Technical Test! This exercise assesses your ability to create automated infrastructure and CI/CD pipelines while adhering to modern DevOps methodologies.
-
----
-
-## Objective
-
-Your task is to create a CI build pipeline that deploys this Node.js web application to a load-balanced environment. You can complete this test locally using tools like Docker or on a cloud provider of your choice. If using a cloud provider, we recommend using a free-tier account to avoid costs.
-
----
-
-## Requirements
-
-### CI Build Pipeline
-
-1. **Trigger Mechanism**:  
-   - The CI job should trigger automatically when a feature branch is pushed to GitHub.  
-   - If working locally, implement an alternative method to trigger the pipeline.
-
-2. **Deployment Workflow**:  
-   - The CI pipeline should test and deploy the application to the target environment after a successful build.
-
----
-
-### Target Environment
-
-The environment must meet the following specifications:
-
-1. **Load Balancer**:
-   - Accessible via HTTP on port 80.
-   - Configured to use a **round-robin** strategy to distribute traffic between application servers.
-
-2. **Application Servers**:
-   - Two instances running this web application.
-   - Each accessible via HTTP on port 3000.
-   - The application must respond with:  
-     `Hi there! I'm being served from {hostname}!`
-
----
-
 ## Tools and Technologies
 
-You are free to use any tools and services to implement your solution. Feel free to tailor what you need Below are some options:
-
-- **CI Services**: GitHub Actions, Jenkins(prefered), GitLab CI/CD, CircleCI
-- **Provisioning Tools**(optional): Terraform, Ansible, CloudFormation
-- **Local Environment**: Docker , Docker swarm or Minikube
-- **Cloud Providers**: Free of choice, but u can use your local machine too
-- **Load Balancers**: NGINX, HAProxy, Cloud-native load balancers or Traefik
-- **Version Control**: GitHub (fork this repository) or Gitlab (re-push the repo)
-
----
-
-## Submission Instructions
-
-1. Fork this repository to your GitHub account.
-2. Implement the solution, ensuring to:
-   - Commit frequently to demonstrate your development process.
-   - Include a clear and structured project layout.
-3. Push your final solution to your public repository.
-4. Write your Solution and Execution Plan on .md file
-4. Send us the URL to your repository for review.
-
----
-
-## Evaluation Criteria
-
-We will evaluate your submission based on the following:
-
-1. **Functionality**: Does the environment meet the requirements (load balancer, two app servers, correct response)?
-2. **Automation**: Is the infrastructure fully automated and deployable using IaC and/or CI/CD pipelines?
-3. **Code Quality**: Is the code readable, modular, and maintainable?
-4. **DevOps Practices**: Does the solution adhere to DevOps principles such as scalability and fault tolerance?
-
----
-
-## Running the Web Application
-
-This is a Node.js application. Use the following commands to run it locally:
-
-- **Run Tests**:  
-  ```bash
-  npm test
-  ```
-- **Start the HTTP Server**:  
-  ```bash
-  npm start
-  ```
+- **CI Services**: Jenkins
+- **Local Environment**: Docker
+- **Load Balancers**: NGINX
+- **Version Control**: GitHub (fork this repository)
 
 ---
 
@@ -94,13 +13,14 @@ This is a Node.js application. Use the following commands to run it locally:
 
 - Be sure to document your solution thoroughly, including:
   - How to deploy the environment.
+    I use Jenkins Pipeline by integrating Git or GitHub into the Job Pipeline that I created.
   - Explanation of tools and services used.
+    For tools, I use Hyper-V as a virtual machine on my laptop.
   - Assumptions and challenges encountered during implementation.
-  - Recommendation of improvement can be implement on this Project
+    The assumption is to create an application with the aim of balancing network traffic. The challenge during implementation is the lack of hardware to facilitate implementation.
+  - Recommendation of improvement can be implement on this Project.
+    Actually, I really wanted to add some recommendations such as Monitoring Tools with Grafana & Prometheus and others, but because I had other work to do, I didn't have enough time to do it.
 - You are encouraged to showcase additional skills or optimizations (e.g., scaling, monitoring, or securing the application).
+  The answer is the same as the question above.
 
-Good luck, and happy coding! 🚀
-
---- 
-
-Let me know if you need further information.
+Thanks 🚀
