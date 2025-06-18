@@ -5,7 +5,7 @@
 - **CI Services**: Jenkins
 - **Local Environment**: Docker
 - **Load Balancers**: NGINX
-- **Version Control**: GitHub (fork this repository)
+- **Version Control**: GitHub
 
 ---
 
