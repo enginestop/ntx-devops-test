@@ -9,7 +9,6 @@ pipeline {
     stage('Build & Deploy') {
       steps {
         script {
-          sh 'docker-compose down --remove-orphans'
           sh 'docker-compose up -d --build'
         }
       }
